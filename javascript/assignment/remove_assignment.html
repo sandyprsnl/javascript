@@ -1,0 +1,94 @@
+<html>
+<head>
+<script>
+divid=0;
+inputid=20;
+function add()
+{divid++;
+inputid++;
+div1=document.getElementById("div1");
+
+newdiv=document.createElement("div");
+newdiv.id=divid;
+newdiv.className="box";
+
+
+if(divid<=4)
+{
+btn=document.createElement("input")
+btn.type="button";
+btn.value="Remove";
+btn.setAttribute("onclick","remove()");
+
+input=document.createElement("input");
+input.type="text";
+input.id=inputid;
+
+newdiv.appendChild(input);
+newdiv.appendChild(btn);
+div1.appendChild(newdiv);
+}
+else
+{
+alert("maximum limit reached!!!")
+}
+}
+function remove()
+{
+
+remove = document.getElementById(divid);
+div1 = document.getElementById("div1");
+div1.removeChild(remove);
+divid--;
+inputid--;
+}
+function print()
+{
+res= "not data";
+if(inputid==21)
+{ first=document.getElementById("21").value;
+res="first name "+first;
+}
+else if(inputid==22)
+{ first=document.getElementById("21").value;
+second=document.getElementById("22").value;
+res=first+"last"+second;
+}
+else if(inputid==23)
+{ first=document.getElementById("21").value;
+second=document.getElementById("22").value;
+third=document.getElementById("23").value;
+res=first+second+third;
+}
+else if(inputid==24)
+{ first=document.getElementById("21").value;
+second=document.getElementById("22").value;
+third=document.getElementById("23").value;
+fourth=document.getElementById("24").value;
+res=first+second+third+fourth;
+}
+document.getElementById("h1").innerHTML=res;
+
+
+}
+
+</script>
+<style>
+.box
+{
+height:30px;
+
+margin:10px;
+border:2px solid red;
+}
+
+</style>
+</head>
+<body>
+<button onclick="add()">add</button>
+<button onclick="print()">result</button>
+<div id="div1"><div>
+<h1 id="h1"></h1>
+
+</body>
+</html>

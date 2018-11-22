@@ -1,0 +1,83 @@
+<html>
+<head>
+<style>
+*{margin:0px; padding:0px;}
+#div1{ background-color:red;
+         height:500px;
+		 width:500px;
+		 margin:auto;
+		 border-radius:10px;
+		 text-align:center;
+}
+#div2{
+         height:90px;
+		 width:200px;
+		 position:relative;
+		  top:-10px;
+		  left:150px;
+		  text-align:center;
+		 
+}
+#btn{ position:relative;
+		 left:200px;
+		 top:170px;
+
+
+}
+.input2{position:relative;
+        
+ }
+#input1{ 
+top:10px;
+}
+
+
+</style>
+
+<script>
+counter=0
+function addfield()
+{
+div = document.getElementById("div2");
+lable_collection = ["PHONE", "Email"];
+if(counter<2)
+  {   newfield = document.createElement("input");
+	newfield.type="text";
+	newfield.className="input2"
+	newfield.id="input"+counter;
+	
+	
+	nlabel = document.createElement("label");
+	nlabel.innerHTML =lable_collection[counter];
+	nlabel.className = "fieldstyle";
+
+	div.appendChild(nlabel);
+div.appendChild(newfield);
+
+counter++;
+}
+else
+{
+alert("maximum limit reached!!!");
+
+}
+}
+
+</script>
+</head>
+<body>
+<div id="div1">
+
+<button onclick="addfield()" id="btn" >add field</button><br><br>
+<h3>NAME:</h3>
+<input type="text" id="name"/><br><br>
+<h3>PHONE:</h3>
+<input type="text" id="phn1"/><br><br>
+
+<div id="div2"></div>
+<h3>Email:</h3>
+<input type="email" id="phn1"/>
+</div>
+</body>
+
+</html>

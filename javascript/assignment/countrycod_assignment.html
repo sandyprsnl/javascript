@@ -1,0 +1,39 @@
+<html>
+<head>
+<script>
+function country()
+{code=document.getElementById("code").value;
+input=document.getElementById("input");
+if(code=="+91")
+{input.value="india";
+
+}
+else if(code=="+92")
+{input.value="pakistan";
+
+}
+else if(code=="+62")
+{input.value="USA";
+
+}
+else if(code=="+51")
+{input.value="austriala";
+
+}
+
+
+}
+</script>
+</head>
+<body>
+</body>
+<select id="code" onchange="country()">
+<option>select country</option>
+<option value="+91">+91</option>
+<option value="+92">+92</option>
+<option value="+62">+62</option>
+<option value="+51">+51</option>
+</select>
+
+<input type="text" id="input"/>
+</html>

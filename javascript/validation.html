@@ -1,0 +1,68 @@
+<html>
+<head>
+<script>
+
+function validate()
+{
+id = document.getElementById("id").value;
+name = document.getElementById("name").value;
+tenth = document.getElementById("tenth").checked;
+
+	if(id== "")
+	{
+	alert("Fill ID");
+	return false;
+	}
+	if(name == "")
+	{
+	alert("Fill NAME");
+	return false;
+	}
+	if(tenth == false)
+	{
+	alert("Select qualification");
+	return false;
+	}
+	
+	
+return true;
+}
+
+
+
+
+function uncheck()
+{
+
+tenth = document.getElementById("tenth");
+
+	if(tenth.checked== true)
+	{
+	tenth.checked = false;
+	}
+	else
+	{
+	tenth.checked = true;
+	}
+
+}
+</script>
+</head>
+<body>
+<form action="swapcolor.html" >
+Id <input type="number" id="id" /> </br></br>
+Name <input type="text" id="name" /> </br> </br>
+Qualification
+
+<input type="checkbox" id="tenth" value="10th" />10th 
+<input type="checkbox" id="tenth" value="12th" />12th 
+<input type="checkbox" id="tenth" value="Graduate" />Graduate 
+<input type="checkbox" id="tenth" value="Post-Graduate" />Post-Graduate
+</br></br>
+
+<input type ="submit" onclick="return validate()" value="check"/>
+<input type="button" value="uncheck" onclick="uncheck()" />
+
+</form>
+</body>
+</html>

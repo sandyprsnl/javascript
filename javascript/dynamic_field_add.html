@@ -1,0 +1,51 @@
+<html>
+<head>
+<style>
+.fieldstyle
+{
+height:30px;
+width:100%;
+border:2px solid pink;
+margin:10px;
+}
+
+#target
+{
+width:500px;
+margin:auto;
+}
+</style>
+
+<script>
+counter=0;
+function addfield()
+{
+destination = document.getElementById("target");
+id_collection = ["rita","pinki","chinki","bandri"];
+	if(counter<4)
+	{
+	newfield = document.createElement("input");
+	newfield.type="text";
+	newfield.id = id_collection[counter];
+	newfield.className = "fieldstyle";
+	
+	nlabel = document.createElement("label");
+	nlabel.innerHTML = "field "+counter;
+	nlabel.className = "fieldstyle";
+
+	destination.appendChild(nlabel);
+	destination.appendChild(newfield);
+	counter++;
+	}
+	else
+	{
+	alert("maximum limit reached!!!");
+	}
+}
+</script>
+</head>
+<body>
+<input type="button" value="add field" onclick="addfield()" />
+<div id="target"> </div>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<html>
+<head>
+<script>
+function count()
+{
+code= document.getElementById("code").value;
+target= document.getElementById("target");
+
+	if(code == "india")
+	{
+	target.value="+91";
+	}
+	else if(code == "usa")
+	{
+	target.value="+62";
+	}
+	else if(code == "pak")
+	{
+	target.value="+92";
+	}
+	else if(code == "aus")
+	{
+	target.value="+1";
+	}
+}
+</script>
+</head>
+<body>
+<select id="code" onchange="count()">
+<option> select country code </option>
+<option value="india">India +91</option>
+<option value="usa">USA +62</option>
+<option value="pak">Pakistan +92 </option>
+<option value="aus"> Australia +1</option>
+</select>
+
+<input type="text" id="target" />
+
+</body>
+</html>

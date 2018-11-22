@@ -1,0 +1,189 @@
+<html>
+<head>
+<script>
+<!-- factorial of any number -->
+function fact()
+{
+var fact=1, a= parseInt(prompt("enter value to check its factorial"));
+for(i=1;i<=a;i++)
+{
+fact=fact*i;
+}
+
+alert("factorial of "+a+" is = "+fact);
+}
+<!--  check number prime or not --> 
+function prime()
+{var a=prompt("type number here");
+var i=2,b, c=true;
+for(i=2;i<a;i++)
+{b=a%i;
+if(b==0)
+c=false;
+break;
+}
+if(c)
+{alert("your no. is a prime number");}
+else
+{alert("your no. is not a prime number");}
+
+}
+<!-- table of any number -->
+function table()
+{var i,num=prompt("type number here");
+for(i=1;i<=10;i++)
+{
+document.write("<br>"+num+"*"+i+"="+num*i);
+}
+}
+
+<!-- sum of digit -->
+function sum()
+{var rem,sum=0, num=parseInt(prompt("type number here"));
+do{
+rem=num%10;
+sum=sum+rem;
+num=parseInt(num/10);
+}
+while(num!=0);
+document.write("the sum of digit is = "+sum);
+}
+
+
+<!-- reverse of digit -->
+function reverse()
+{
+var rem,rev=0, num=parseInt(prompt("type number here"));
+while(num!=0)
+{
+rem=num%10;
+rev=rev*10+rem;
+num=parseInt(num/10)
+}
+document.write("the revrse of digit is = "+rev);
+}
+
+<!-- fabonacci series -->
+function fab()
+{
+var a=0,b=1,c= 0,d=parseInt(prompt("enter value to check its factorial"));
+document.write("fabonacci series <br>");
+while(b<=d)
+{
+document.write(c);
+document.write("<br>");
+c=a+b;
+a=b;
+b=c;
+}
+
+}
+<!-- swap two number using third variable -->
+function swap()
+{
+var temp,a=parseInt(prompt("enter first value")),b=parseInt(prompt("enter second value "));
+temp=a
+a=b;
+b=temp;
+alert("swap two number using third variable is = "+a+b);
+}
+
+<!-- swap two number without third variable -->
+function swap2()
+{
+var a=parseInt(prompt("enter first value")),b=parseInt(prompt("enter second value "));
+a=a+b;
+b=a-b;
+a=a-b;
+alert("swap two number without third variable = "+a+b);
+}
+function center()
+{
+var i,j, a=parseInt(prompt("enter first value"));
+document.write("<center> ");
+for(i=1;i<=a;i++)
+{
+for(j=1;j<=i;j++)
+{
+document.write(" * ");
+}
+document.write(" <br> ");
+}
+document.write("</center> ");
+}
+function left()
+{
+var i,j, a=parseInt(prompt("enter first value"));
+document.write("<left> ");
+for(i=1;i<=a;i++)
+{
+for(j=1;j<=i;j++)
+{
+document.write(" * ");
+}
+document.write(" <br> ");
+}
+document.write("</left> ");
+}
+function left2()
+{
+var i,j, a=parseInt(prompt("enter first value"));
+document.write("<center> ");
+for(i=a;i>=0;i--)
+{
+for(j=0;j<i;j++)
+{
+document.write(" * ");
+}
+document.write(" <br> ");
+}
+document.write("</center> ");
+}
+function left3()
+{
+var i,j, a=parseInt(prompt("enter first value"));
+document.write("<left> ");
+for(i=a;i>=0;i--)
+{
+for(j=0;j<i;j++)
+{
+document.write(i+" * ");
+}
+document.write(" <br> ");
+}
+document.write("</left> ");
+}
+</script>
+</head>
+<body style="background: linear-gradient(red, yellow, green); text-align:center;">
+<button  onclick="fact()">factorial of any number</button></br></br>
+
+<button  onclick="prime()">check number prime or not</button></br></br>
+
+<button  onclick="table()">table of any number</button></br></br>
+
+<button  onclick="sum()">sum of digit</button></br></br>
+
+<button  onclick="reverse()">reverse of digit</button></br></br>
+
+<button  onclick="fab()">fabonacci series</button></br></br>
+
+<button  onclick="swap()">swap two number using third variable</button></br></br>
+
+<button  onclick="swap2()">swap two number without third variable</button></br></br>
+
+<button  onclick="center()" >star1</button></br></br>
+<button   onclick="left()">star1</button></br></br>
+<button   onclick="left2()">star1</button></br></br>
+
+<button   onclick="left3()">star1</button></br></br>
+
+
+</body>
+
+
+
+
+
+
+</html>

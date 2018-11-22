@@ -1,0 +1,85 @@
+<html>
+    <head><title>assignment_On_Validation</title>
+    <script>
+    function validation()
+        { id = document.getElementById("id").value;
+         
+          name = document.getElementById("name").value;
+		      tenth=document.getElementById("tenth").checked;    
+         if(id =="")
+             {
+               alert("plzz fill id");
+                 return false;
+                 
+             }
+            if(name =="")
+             {
+               alert("plzz fill name");
+                 return false;
+             }
+			 if(tenth == false)
+             {
+               alert("plzz fill qualification");
+                 return false;
+             }
+return true
+        }
+  function qual(id)
+{
+tenth=document.getElementById("tenth");
+twelve=document.getElementById("twelve");
+Graduate=document.getElementById("Graduate");
+Post=document.getElementById("Post");
+ 
+ if(id=="tenth")
+ { twelve.checked=false;
+Graduate.checked=false;
+ Post.checked=false;
+  }
+  else if(id=="twelve")
+  {
+  tenth.checked=true;
+Graduate.checked=false;
+ Post.checked=false;
+  
+  }
+  else if(id=="Graduate")
+  {
+   tenth.checked=true;
+twelve.checked=true;
+ Post.checked=false;
+ }
+ else if(id=="Post")
+ {tenth.checked=true;
+twelve.checked=true;
+ Graduate.checked=true;
+ }
+
+}  
+
+
+    </script>
+    </head>
+    <body>
+        <form>
+    ID:
+        <input type="number" id="id"/></br></br>
+    Name:
+    <input type="text" id="name"/></br></br>
+            
+<input type="checkbox" id="tenth" value="10th" onclick="qual(this.id)" checked />10th 
+
+<input type="checkbox" id="twelve" value="12th" onclick="qual(this.id)"/>12th
+
+<input type="checkbox" id="Graduate" value="Graduate" onclick="qual(this.id)"/>Graduate 
+
+<input type="checkbox" id="Post" value="Post-Graduate" onclick="qual(this.id)"/>Post-Graduate</br></br>
+<div id="div1"></div>
+
+
+   <input type ="submit" onclick="return validation()" value="check"/>
+    
+            </form>
+            </body>
+    
+</html>

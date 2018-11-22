@@ -1,0 +1,34 @@
+<html>
+<head>
+<style>
+*
+{
+margin:0px;
+padding:0px;
+}
+#box
+{
+height:200px;
+width:200px;
+background:pink;
+}
+</style>
+<script>
+function changebg()
+{
+color = document.getElementById("color").value;
+
+target = document.getElementById("box");
+
+target.style.backgroundColor = color;
+}
+</script>
+</head>
+<body>
+<input type="color" id="color" />
+<input type="button" onclick="changebg()" value="change color" />
+</br><br>
+<div id="box">  </div>
+
+</body>
+</html>

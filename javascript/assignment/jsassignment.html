@@ -1,0 +1,110 @@
+<html>
+<head><title>assignment_4</title>
+<style>
+*{margin:0px; padding:0px;}
+#id{position:relative;
+        left:30px;
+		top:5px;
+		}
+#Email{position:relative;
+        left:8px;}
+#btn3{ position:relative;
+        left:100px; }	  
+
+</style>
+
+</head>
+<script>
+counter=1;
+function addphone()
+{
+phone = document.getElementById("div1");
+
+lable_collection = [ ,"PHONE 2", "PHONE 3"];
+if(counter<=2)
+  {
+  newphone = document.createElement("input");
+  ndiv = document.createElement("div");
+	newphone.type="text";
+	newphone.className="phone";
+     newphone.id="phone"+counter11;
+	 
+	 label = document.createElement("label");
+	 label.innerHTML= lable_collection[counter];
+	 label.className="p1";
+	 
+	
+	 
+	 br = document.createElement("br");
+	
+phone.appendChild(label);
+phone.appendChild(newphone);
+phone.appendChild(ndiv);
+phone.appendChild(br);
+counter++;
+}
+else
+{
+alert("you add only 3 PHONE!!!");
+
+}
+
+}
+count=1;
+function addemail()
+{
+email = document.getElementById("div2");
+
+lable_collection = [,"Email 2:", "Email 3:","Email 4:"];
+if(count<=3)
+{newemail = document.createElement("input");
+ ndiv = document.createElement("div");
+	newemail.type="text";
+	newemail.className="email";
+	newemail.id="email"+count;
+	
+	label = document.createElement("label");
+	label.innerHTML= lable_collection[count];
+	label.className="email1";
+	label.id="email1"+count;
+
+	br = document.createElement("br")
+	
+email.appendChild(label);	
+email.appendChild(newemail);
+email.appendChild(ndiv);
+email.appendChild(br);
+
+count++;
+}
+else{
+
+alert("you add only 4 Email!!!");
+
+}
+
+}
+
+</script>
+<body>
+
+<label for="id">ID:</label>
+<input type="text" id="id"><br><br>
+NAME:
+<input type="text" id="NAME"><br><br>
+PHONE:
+<input type="text" id="PHONE"><br><br>
+
+<button onclick="addphone()">ADD PHONE</button>
+
+<div id="div1"></div><br>
+
+Email:
+<input type="email" id="Email"><br><br>
+<button onclick="addemail()">ADD Email</button>
+
+<div id="div2"></div>
+<button id="btn3">submit</button>
+
+</body>
+<html>

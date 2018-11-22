@@ -1,0 +1,139 @@
+<html>
+<head>
+<link href="D:/online html class at 8pm/bootstrapclasses/css/bootstrap.css" rel="stylesheet">
+<style>
+*{marigin:0px; padding:0px;}
+body{background: linear-gradient(red, yellow, green);}
+
+.present-count{width:450px;
+               height:50px;
+			   margin:100px auto;
+			   font-size:50px;
+			   text-align:center;
+			   color:white;
+			   
+}
+.prograss-bar {
+                width:600px;
+               height:26px;
+			   background-color:#bbb;
+			   border-radius:13px;
+			   margin:50px auto;
+			   padding-top:2px;
+			   margin-top:300px;
+}
+.prograss    {width:0px;
+            height:20px;
+			border-radius:10px;
+			margin-top:1px;
+			
+			transition: width 5s linear;
+			
+}
+
+              
+
+.group     {width:600px;
+           height:50px;
+		   margin-top:50px;
+}
+.btn{
+      
+	  border-radius:5px;
+	  text-align:center;
+	  position:relative;
+}
+#btn3 { left:400px;
+}
+#btn2 { left:200px;
+}
+</style>
+</head>
+<body >
+
+<div id="presentCount" class="present-count">100%</div>
+
+<div class="prograss-bar">
+<div class="prograss progress-bar-striped" id="progress"></div>
+
+<div class="group">
+<button class="btn btn-primary " id="btn1" onclick="progress1()">25%</button>
+<button class="btn btn-warning" id="btn2" onclick="progress2()">75%</button>
+<button class="btn btn-danger" id="btn3" onclick="progress3()">100%</button>
+</div>
+</div>
+
+
+
+<script>
+function progress()
+{prog=document.getElementById("progress");
+precent=document.getElementById("presentCount");
+counter=5;
+progress=25;
+
+id=setInterval(frame,200);
+
+function frame()
+{
+if(progress==500 && counter==100)
+{clearInterval(id);}
+else
+{progress+=5;
+counter+=1;
+prog.style.width=progress+"px";
+
+precent.innerHTML=counter+"%";
+
+}
+
+}
+
+}
+
+progress();
+
+function progress1()
+{prog=document.getElementById("progress");
+
+for(pg=0;pg<=25;pg++)
+{
+prog.innerHTML=pg+"%";
+}
+prog.style.textAlign="center";
+prog.style.color="white";
+prog.style.width=200;
+
+prog.style.backgroundColor="#5cb85c";
+
+
+}
+function progress2()
+{prog=document.getElementById("progress");
+
+
+prog.innerHTML=75+"%"+" "+"(warning)";
+
+prog.style.textAlign="center";
+
+prog.style.width=400;
+prog.style.backgroundColor="#f0ad4e";
+
+}
+
+function progress3()
+{prog=document.getElementById("progress");
+
+
+prog.innerHTML=100+"%"+" "+"(danger)";
+
+prog.style.textAlign="center";
+prog.style.backgroundColor="d9534f";
+prog.style.color="white";
+
+prog.style.width=600;
+
+}
+</script>
+</body>
+</html>

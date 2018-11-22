@@ -1,0 +1,238 @@
+*{margin:0px;padding: :0px }
+body{background-color:#000; overflow: hidden; }
+
+
+/* container */
+.container{
+           width:200px;
+		   height:20px;
+		   position:absolute;
+		   top:15%;
+		   left:10%;
+		   transform:translate(-50%,-50%);
+		  
+		   }
+/* loader-box		    */
+.loader-boxb{width:100%;
+         height:100%;
+		 position:relative;
+        
+}
+/* loader */
+.loadera{ position:absolute;
+         width:calc(100% - 10px);
+		 height:calc(100% - 10px);
+          border: 5px solid #fff;
+		  border-top: 5px solid gold;
+		  border-bottom: 5px solid #09f;
+		  border-left: 5px solid silver;
+		  border-right: 5px solid platinum;
+		  border-radius:50%;
+		  animation:rotate 3s ease infinite;
+
+}
+/* loader animation */
+@keyframes rotate
+{
+100%{transform:rotate(-360deg); }
+
+}
+.loader-box{;
+    height: 200px;
+    width: 200px;
+    position: absolute;
+    top:50%;
+    left: 50%;
+        transform: translate(-50%,-50%);
+}
+
+
+.loaderb{
+    position: absolute;
+    top:20%;
+    right:0%;
+    transform: translate(-50%,-50%);
+    width: 200px;
+    height: 200px;
+    box-sizing: border-box;
+    
+    
+}
+.face{
+    position: absolute;
+    border:2px solid #121212;
+    
+}
+.face1{
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1 );
+    border-radius: 50%;
+    border-left: 2px solid  #ffff00;
+     border-top: 2px solid  #ffff00;
+    border-right: 2px solid  #ffff00;
+    animation: facemove 3s linear infinite;
+}
+@keyframes facemove
+{
+    0%{transform: rotate(0deg);}
+    100%{transform: rotate(360deg);}
+    
+}
+.face2{
+    top:30px;
+    right:30px;
+    bottom:30px;
+    left:30px;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1 );
+    border-radius: 50%;
+    border-right: 2px solid  #03a9fa;
+     border-bottom: 2px solid  #03a9fa;
+    animation: facemove 3s linear reverse infinite;
+}
+.face3{
+    top:40px;
+    right:40px;
+    bottom:40px;
+    left:40px;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1 );
+    border-radius: 50%;
+    border-right: 2px solid  pink;
+     border-bottom: 2px solid  pink;
+    animation: facemove 3s linear  infinite;
+}
+.face4{
+    top:60px;
+    right:60px;
+    bottom:60px;
+    left:60px;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1 );
+    border-radius: 50%;
+    border-right: 2px solid  red;
+     border-bottom: 2px solid  red;
+    animation: facemove 3s linear reverse infinite;
+}
+.face5{
+    top:80px;
+    right:80px;
+    bottom:80px;
+    left:80px;
+    background: #090909;
+    box-shadow: 0 0 10px rgba(0,0,0,1 );
+    border-radius: 50%;
+    border-right: 2px solid  brown;
+     border-bottom: 2px solid  brown;
+    animation: facemove 3s linear infinite;
+}
+/* squre animation */
+.loader{position: absolute; background: 
+    rgba(255,255,255,.1);
+    box-shadow: 0 0 25px rgba(0,0,0,.5);
+    border: 10px solid rgba(255,255,255,.2);
+    border-top: 10px solid rgba(255,255,255,.1);
+    border-bottom: 10px solid rgba(255,255,255,.1);
+    animation: lodaran 10s alternate infinite;
+    
+}
+@keyframes lodaran
+{
+    0%{
+        transform: rotate(0deg);
+        background: rgba(255,0,0,.2);
+    }
+    20%
+    {
+      background: rgba(255,255,0,.2);  
+    }
+     40%
+    {
+      background: rgba(0,255,0,.2);  
+    }
+     60%
+    {
+      background: rgba(255,0,255,.2);  
+    }
+     80%
+    {
+      background: rgba(0,255,255,.2);  
+    }
+    100%{ transform: rotate(720deg);
+        
+    }
+}
+#a{top:0;
+    animation-delay: -0.1s;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    
+}
+#b{top:10px;
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+     animation-delay: -0.2s;
+    
+}
+#c{top:20px;
+    left: 20px;
+    right:20px;
+    bottom: 20px;
+     animation-delay: -0.3s;
+    
+}
+#d{top:30px;
+    left:30px;
+    right:30px;
+    bottom: 30px;
+     animation-delay: -0.4s;
+    
+}
+#e{top:40px;
+    left: 40px;
+    right:40px;
+    bottom:40px;
+     animation-delay: -0.5s;
+    
+}
+#f{top:50px;
+    left: 50px;
+    right:50px;
+    bottom:50px;
+     animation-delay: -0.6s;
+    
+}
+#g{top:60px;
+    left: 60px;
+    right:60px;
+    bottom:60px;
+     animation-delay: -0.7s;
+    
+}
+#h{top:70px;
+    left: 70px;
+    right:70px;
+    bottom:70px;
+     animation-delay: -0.8s;
+    
+}
+#i{top:80px;
+    left: 80px;
+    right:80px;
+    bottom:80px;
+     animation-delay: -0.8s;
+    
+}
+#j{top:90px;
+    left: 90px;
+    right:90px;
+    bottom:90px;
+     animation-delay: -0.8s;
+    
+}

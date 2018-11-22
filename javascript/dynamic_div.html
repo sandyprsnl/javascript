@@ -1,0 +1,208 @@
+<html>
+<head>
+<style>
+*{margin:0px; padding:0px;}
+body
+{background:linear-gradient(to right,red,yellow,green,blue,indigo);}
+.div{height:200px;
+    width:300px; 
+ 
+	position:absolute;
+	font-size:20px;	
+ }
+ #div2{right:0px;}
+ 
+#target{height:400px;
+    width:400px; 
+left:300px;
+bottom:0px;}
+
+#btn{height:50px;
+    width:100px;
+	position:relative;
+left:400px;
+top:150px;
+border-radius:50%;
+font-size:20px;	
+box-shadow:5px px 10px white;
+}
+.input{width:50px;}
+
+
+
+
+
+
+</style>
+<script>
+div=0;
+function country()
+{ 
+<!-- location of newdiv -->
+target=document.getElementById("target" );
+<!-- div height -->
+height=document.getElementById("height").value;
+<!-- div width -->
+width=document.getElementById("width").value;
+<!-- div color -->
+color=document.getElementById("background").value;
+<!-- div border -->
+border=document.getElementById("Border").value;
+<!-- div border-radius -->
+radius=document.getElementById("radius").value;
+<!-- div border-color -->
+bcolor=document.getElementById("bcolor").value;
+<!-- div content -->
+content=document.getElementById("content").value;
+
+if(height=="" && height<="400")
+{alert("maximum height is 400 \n minimum height should be greater then 0!")}
+if(width=="" && width<="400")
+{alert("maximum width is 400 \n minimum width should be greater then 0!")}
+if(border=="" && border<="10")
+{alert("maximum border is 10 \n minimum border should be greater then 0!")}
+else
+{
+div++;
+if(div<=1)
+{
+<!-- making new div -->
+newdiv=document.createElement("div");
+newdiv.id="div";
+newdiv.className="newdiv";
+   newdiv.style.height=height;
+    newdiv.style.backgroundColor=color;
+    newdiv.style.width=width;
+    newdiv.style.borderWidth=border;
+	
+	
+	
+    newdiv.style.borderRadius=radius;
+   newdiv.style.borderColor=bcolor;
+   newdiv.innerHTML=content;
+   newdiv.color=bcolor;
+   
+   code=document.getElementById("code").value;
+
+if(code=="a")
+{
+newdiv.style.borderStyle="dotted";
+}
+else if(code=="b")
+{
+newdiv.style.borderStyle="dashed";
+}
+else if(code=="c")
+{
+newdiv.style.borderStyle="solid";
+}
+else if(code=="d")
+{
+newdiv.style.borderStyle="double";
+}
+else if(code=="e")
+{
+newdiv.style.borderStyle="groove";
+}
+else if(code=="f")
+{
+newdiv.style.borderStyle="ridge";
+}
+else if(code=="g")
+{
+newdiv.style.borderStyle="inset";
+}
+else if(code=="h")
+{
+newdiv.style.borderStyle="outset";
+}
+else if(code=="i")
+{
+newdiv.style.borderStyle="none";
+}
+else if(code=="j")
+{
+newdiv.style.borderStyle="hidden";
+}
+   
+   
+  
+
+newdiv.style.boxShadow="10px 20px 30px white";
+
+
+
+ target.appendChild(newdiv);
+
+ 
+}
+else{
+         alert("maximum limit is 1 !!!")
+
+}
+}
+}
+function hover()
+{
+
+ document.getElementById("div").style.backgroundColor= "blue";
+
+
+}
+
+
+</script>
+</head>
+<body>
+
+<div class="div">
+
+<br>
+Height:
+  <input type="number" min="1" max="400" value="400"
+   id="height"  class="input" ><br></br>
+
+Background-color:
+<input type="color" id="background" class="input"  ><br></br>
+
+Border-radius:
+<input type="text"  id="radius" class="input"  ><br></br>
+
+</div>
+<div class="div" id="div2">
+
+<br>
+Width:
+<input type="number" min="1" max="400" id="width" class="input" value="400" ><br></br>
+
+
+Border-width:
+
+<input type="number" min="1" max="10" id="Border" class="input"value="10" >
+
+<select id="code">
+<option>Border-Style:</option>
+<option value="a">dotted</option>
+<option value="b">dashed</option>
+<option  value="c">solid</option>
+<option value="d">double</option>
+<option value="e">groove</option>
+<option value="f">ridge</option>
+<option value="g">inset</option>
+<option value="h">outset</option>
+<option value="i">none</option>
+<option value="j">hidden</option>
+</select>
+<br></br>
+border-color:
+<input type="color" id="bcolor" class="input"><br></br>
+Content:
+<input type="text" id="content" class="input"><br></br>
+
+</div>
+
+<button id="btn" onclick="country()">make div</button>
+<div id="target" class="div"></div>
+
+</body>
+</html>

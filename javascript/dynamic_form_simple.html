@@ -1,0 +1,47 @@
+<html>
+<head>
+<script>
+counter = 2;
+function addfield()
+{//getting target div from form
+target = document.getElementById("target");
+
+//creating div tag
+ndiv = document.createElement("div");
+
+//creating a label to insert PHONE 1 ,2 etc
+nlabel = document.createElement("label");
+nlabel.innerHTML="PHONE "+counter+" ";
+counter++;
+
+//creating input type number
+nfield = document.createElement("input");
+nfield.type="number";
+
+//creating a break tag
+br = document.createElement("br");
+
+//putting label and input type number in newly created div
+ndiv.appendChild(nlabel);
+ndiv.appendChild(nfield);
+
+//putting newly created div in target div
+target.appendChild(ndiv);
+
+//putting created break tag in target div
+target.appendChild(br);
+}
+
+</script>
+</head>
+<body>
+<form>
+ID <input type="text" id="id" /> </br></br>
+
+PHONE 1 <input type="number" id="phone1" />
+<input type="button" onclick="addfield()" value="ADD" />
+</br></br>
+<div id="target"> </div>
+</form>
+</body>
+</html>

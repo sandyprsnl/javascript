@@ -1,0 +1,108 @@
+<html>
+<head>
+<script>
+divid = 0;
+fieldid = 20;
+function addfield()
+{
+divid++;
+fieldid++;
+
+if(divid <=4)
+{
+
+target = document.getElementById("target");
+
+newdiv = document.createElement("div");
+newdiv.id = divid;
+newdiv.className = "box";
+
+if(divid<=1)
+{
+dbtn = document.createElement("input");
+dbtn.type="button";
+dbtn.value = "remove";
+dbtn.setAttribute("onclick","removefield()");
+newdiv.appendChild(dbtn);
+}
+
+newfield = document.createElement("input");
+newfield.type="text";
+newfield.id = fieldid;
+
+newdiv.appendChild(newfield);
+
+target.appendChild(newdiv);
+}
+else
+{
+alert("limit crossed");
+}
+}
+
+function removefield()
+{
+tempdiv = document.getElementById(divid);
+target = document.getElementById("target");
+target.removeChild(tempdiv);
+divid--;
+fieldid--;
+}
+
+function showdata()
+{
+res = "no data";
+	if(fieldid==21)
+	{
+	first = document.getElementById("21").value;
+	res = first;
+	}
+	else if(fieldid == 22)
+	{
+	first  = document.getElementById("21").value;
+	second = document.getElementById("22").value;
+	res = first+" "+second;
+	}
+	else if(fieldid == 23)
+	{
+	first  = document.getElementById("21").value;
+	second = document.getElementById("22").value;
+	third  = document.getElementById("23").value;
+	res = first+" "+second+" "+third;
+	}
+	else if(fieldid == 24)
+	{
+	first  = document.getElementById("21").value;
+	second = document.getElementById("22").value;
+	third  = document.getElementById("23").value;
+	fourth = document.getElementById("24").value;
+	res = first+" "+second+" "+third+" "+fourth;
+	}
+
+	document.getElementById("show").innerHTML=res;
+}
+
+</script>
+<style>
+.box
+{
+height:30px;
+margin:10px;
+border:2px solid red;
+}
+</style>
+</head>
+<body>
+<form>
+<input type="button" value="ADD" onclick="addfield()" />
+<input type="button" value="Show data" onclick="showdata()" />
+</br>
+<div id="target" style="background:pink;border:5px solid black;" > </div>
+
+<h1 id="show" > </h1>
+
+
+</form>
+
+</body>
+</html>

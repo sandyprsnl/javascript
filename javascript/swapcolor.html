@@ -1,0 +1,43 @@
+<html>
+<head>
+<style>
+*
+{
+margin:0px;
+padding:0px;
+}
+
+.box
+{
+height:200px;
+width:200px;
+}
+
+</style>
+<script>
+
+function swapbg()
+{
+box1 = document.getElementById("b1");
+box2 = document.getElementById("b2");
+
+first  = box1.style.backgroundColor;
+second = box2.style.backgroundColor;
+
+box1.style.backgroundColor = second;
+box2.style.backgroundColor = first;
+
+box1.style.width = "300px";
+document.body.style.backgroundColor = first;
+}
+
+</script>
+</head>
+<body>
+
+<div class="box" id="b1" style="background-color:pink;"> </div> </br></br>
+<input type="button" value="swap bg" onclick="swapbg()" /> </br></br>
+<div class="box" id="b2" style="background-color:red;"> </div>
+
+</body>
+</html>
